@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "llm"
+version = "0.1.0"
+description = "Professional LangChain + DeepSeek agent project for mobile engineering learning."
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "fastapi>=0.115.0",
+    "langchain>=1.0.0",
+    "langchain-deepseek>=1.0.0",
+    "langgraph>=1.0.0",
+    "python-dotenv>=1.0.1",
+    "uvicorn>=0.30.0",
+]
+
+[project.scripts]
+llm = "llm.cli:main"
+llm-api = "llm.http.server:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]

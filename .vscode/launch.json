@@ -1,0 +1,94 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Python: 调试 llm.main",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "llm.main",
+      "cwd": "${workspaceFolder}",
+      "envFile": "${workspaceFolder}/.env",
+      "console": "integratedTerminal",
+      "justMyCode": true
+    },
+    {
+      "name": "Python: 调试移动端架构 Agent",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "llm.main",
+      "cwd": "${workspaceFolder}",
+      "envFile": "${workspaceFolder}/.env",
+      "console": "integratedTerminal",
+      "justMyCode": true,
+      "args": [
+        "请帮我设计一个适合大型 Android 项目的架构方案",
+        "--platform",
+        "android",
+        "--experience",
+        "intermediate",
+        "--language",
+        "java",
+        "--thread-id",
+        "debug-mobile-architect"
+      ]
+    },
+    {
+      "name": "Python: 调试原始结构化输出",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "llm.main",
+      "cwd": "${workspaceFolder}",
+      "envFile": "${workspaceFolder}/.env",
+      "console": "integratedTerminal",
+      "justMyCode": true,
+      "args": [
+        "请分析 Android 启动优化的完整排查路径",
+        "--platform",
+        "android",
+        "--experience",
+        "senior",
+        "--language",
+        "java",
+        "--raw"
+      ]
+    },
+    {
+      "name": "Python: 直接调试 src/llm/main.py",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/src/llm/main.py",
+      "cwd": "${workspaceFolder}",
+      "envFile": "${workspaceFolder}/.env",
+      "console": "integratedTerminal",
+      "justMyCode": true
+    },
+    {
+      "name": "Python: 调试 llm-api HTTP 服务",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "llm.http.server",
+      "cwd": "${workspaceFolder}",
+      "envFile": "${workspaceFolder}/.env",
+      "console": "integratedTerminal",
+      "justMyCode": true
+    },
+    {
+      "name": "Go: 调试 gRPC API",
+      "type": "go",
+      "request": "launch",
+      "mode": "auto",
+      "program": "${workspaceFolder}/go-api/cmd/server",
+      "cwd": "${workspaceFolder}/go-api",
+      "envFile": "${workspaceFolder}/go-api/.env"
+    }
+  ],
+  "compounds": [
+    {
+      "name": "联调: Python API + Go gRPC",
+      "configurations": [
+        "Python: 调试 llm-api HTTP 服务",
+        "Go: 调试 gRPC API"
+      ]
+    }
+  ]
+}

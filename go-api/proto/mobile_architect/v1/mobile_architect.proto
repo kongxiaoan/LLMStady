@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package mobile_architect.v1;
+
+option go_package = "github.com/zhuanz/llm/go-api/gen/proto/mobile_architect/v1;mobilearchitectv1";
+
+service MobileArchitectService {
+  rpc AskExpert(AskExpertRequest) returns (AskExpertResponse);
+}
+
+message AskExpertRequest {
+  string question = 1;
+  string thread_id = 2;
+  string user_name = 3;
+  string target_platform = 4;
+  string experience_level = 5;
+  string preferred_language = 6;
+}
+
+message AskExpertResponse {
+  string summary = 1;
+  string architecture_recommendation = 2;
+  string performance_recommendation = 3;
+  string design_principles = 4;
+  repeated string risks = 5;
+  repeated string learning_notes = 6;
+}

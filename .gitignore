@@ -1,0 +1,20 @@
+.env
+.llm/
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+dist/
+build/
+.coverage
+.DS_Store
+
+# IDE
+.idea/
+
+# Go API
+go-api/bin/
+go-api/.env
+go-api/coverage.out
