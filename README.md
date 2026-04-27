@@ -115,6 +115,12 @@ python -m llm.main "请解释 Java 六大设计原则在 Android 项目中的落
 python src/llm/main.py "如何设计一个可演进的 Flutter 架构"
 ```
 
+RAG Demo：
+
+```bash
+llm-rag-demo "Android 启动优化应该先看哪些指标"
+```
+
 ## 新电脑恢复环境
 
 如果你在另一台电脑上下载这个项目，推荐按下面步骤恢复：
@@ -209,6 +215,7 @@ go test ./...
 - [LangGraph Server 是什么](./docs/langgraph-server.md)
 - [Python Agent + Go gRPC API 分层设计建议](./docs/go-grpc-api-architecture.md)
 - [Python Agent + Go gRPC 本地联调指南](./docs/python-go-local-debug.md)
+- [RAG Demo](./docs/rag-demo.md)
 
 ## Go API 层
 

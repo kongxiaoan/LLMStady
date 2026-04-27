@@ -20,6 +20,7 @@ dependencies = [
 [project.scripts]
 llm = "llm.cli:main"
 llm-api = "llm.http.server:main"
+llm-rag-demo = "llm.rag.cli:main"
 
 [tool.setuptools]
 package-dir = {"" = "src"}
