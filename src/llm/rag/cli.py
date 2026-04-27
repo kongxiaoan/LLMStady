@@ -20,6 +20,7 @@ def build_parser() -> argparse.ArgumentParser:
 
 
 def main() -> None:
+    print("=== rag ===")
     args = build_parser().parse_args()
     service = RagDemoService(data_dir=args.data_dir)
     result = service.ask(args.question, top_k=args.top_k)

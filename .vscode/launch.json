@@ -2,6 +2,27 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "name": "Python: 调试RAG",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "llm.rag",
+      "cwd": "${workspaceFolder}",
+      "envFile": "${workspaceFolder}/.env",
+      "console": "integratedTerminal",
+      "justMyCode": true,
+      "args": [
+        "请帮我设计一个适合大型 Android 项目的架构方案",
+        "--platform",
+        "android",
+        "--experience",
+        "intermediate",
+        "--language",
+        "java",
+        "--thread-id",
+        "debug-rag"
+      ]
+    },
+    {
       "name": "Python: 调试 llm.main",
       "type": "debugpy",
       "request": "launch",
