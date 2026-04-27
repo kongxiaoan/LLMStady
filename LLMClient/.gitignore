@@ -1,0 +1,39 @@
+# Android / Gradle
+*.iml
+.gradle/
+build/
+local.properties
+.kotlin/
+
+# Artifacts
+*.apk
+*.aar
+*.aab
+*.ap_
+*.dex
+*.class
+
+# Generated
+bin/
+gen/
+out/
+
+# Android Studio
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+/captures
+.externalNativeBuild
+.cxx
+
+# Keystores (never commit)
+*.jks
+*.keystore
+
+# Profiling / misc
+*.hprof
+.DS_Store
+*.log

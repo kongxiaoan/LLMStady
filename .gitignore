@@ -18,3 +18,8 @@ build/
 go-api/bin/
 go-api/.env
 go-api/coverage.out
+
+# Android (LLMClient) — 细则见 LLMClient/.gitignore
+LLMClient/**/local.properties
+LLMClient/.kotlin/
+LLMClient/**/*.hprof
